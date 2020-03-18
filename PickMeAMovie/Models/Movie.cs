@@ -43,7 +43,7 @@ namespace PickMeAMovie.Models
             set { }
         }
 
-        public Omdb Detalhes { get; set; }
+        public Omdb Details { get; set; }
     }
 
     public partial class Movie

@@ -92,6 +92,8 @@ namespace PickMeAMovie.Models.API
 
         [JsonProperty("Value")]
         public string Value { get; set; }
+
+        public string Img => Source.Replace(" ", "_") + ".png";
     }
 
     public partial class Omdb

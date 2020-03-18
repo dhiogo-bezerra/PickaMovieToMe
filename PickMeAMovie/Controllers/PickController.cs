@@ -15,22 +15,24 @@ namespace PickMeAMovie.Controllers
     public class PickController : Controller
     {
         // GET: Pick
+        //Get
         public ActionResult Index()
         {
-            var movie = new Movie();
+            var movies = MovieJson.GetMovies();
 
-            using (StreamReader r = new StreamReader(Server.MapPath("~/Json/1001Movies.json")))
+            if (movies.Count > 0)
             {
-                string jsonString = r.ReadToEnd();
-                movie = Movie.FromJson(jsonString).OrderBy(x => Guid.NewGuid()).FirstOrDefault();
-                if (movie != null) movie.Detalhes = Api.SearchOmdb(movie.Const);
+                var movie = movies.OrderBy(x => Guid.NewGuid()).FirstOrDefault();
+                if (movie != null) movie.Details = Api.SearchOmdb(movie.Const);
+                return View(movie);
             }
-
-           
-            return View(movie);
+            else
+            {
+                throw new FileLoadException();
+            }
+            
         }
 
-       
     }
 }
     

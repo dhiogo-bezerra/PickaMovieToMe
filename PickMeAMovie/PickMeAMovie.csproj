@@ -301,8 +301,10 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Business\Api.cs" />
+    <Compile Include="Business\MovieJson.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\PickController.cs" />
+    <Compile Include="Controllers\TesteController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -311,18 +313,54 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\AdminLTE\css\adminlte.css" />
+    <Content Include="Content\AdminLTE\css\adminlte.min.css" />
+    <Content Include="Content\AdminLTE\css\alt\adminlte.components.css" />
+    <Content Include="Content\AdminLTE\css\alt\adminlte.components.min.css" />
+    <Content Include="Content\AdminLTE\css\alt\adminlte.core.css" />
+    <Content Include="Content\AdminLTE\css\alt\adminlte.core.min.css" />
+    <Content Include="Content\AdminLTE\css\alt\adminlte.extra-components.css" />
+    <Content Include="Content\AdminLTE\css\alt\adminlte.extra-components.min.css" />
+    <Content Include="Content\AdminLTE\css\alt\adminlte.pages.css" />
+    <Content Include="Content\AdminLTE\css\alt\adminlte.pages.min.css" />
+    <Content Include="Content\AdminLTE\css\alt\adminlte.plugins.css" />
+    <Content Include="Content\AdminLTE\css\alt\adminlte.plugins.min.css" />
+    <Content Include="Content\AdminLTE\js\adminlte.js" />
+    <Content Include="Content\AdminLTE\js\adminlte.min.js" />
+    <Content Include="Content\AdminLTE\js\demo.js" />
+    <Content Include="Content\AdminLTE\js\pages\dashboard.js" />
+    <Content Include="Content\AdminLTE\js\pages\dashboard2.js" />
+    <Content Include="Content\AdminLTE\js\pages\dashboard3.js" />
     <Content Include="Content\bootstrap-grid.css" />
     <Content Include="Content\bootstrap-grid.min.css" />
     <Content Include="Content\bootstrap-reboot.css" />
     <Content Include="Content\bootstrap-reboot.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\freelancer.css" />
+    <Content Include="Content\freelancer.min.css" />
     <Content Include="Content\img\carousel\2001.png" />
     <Content Include="Content\img\carousel\cinema_paradiso.png" />
     <Content Include="Content\img\carousel\Yojimbo.png" />
+    <Content Include="Content\img\hal9000.png" />
+    <Content Include="Content\img\Internet_Movie_Database.png" />
+    <Content Include="Content\img\Metacritic.png" />
+    <Content Include="Content\img\Rotten_Tomatoes.png" />
+    <Content Include="Content\js\freelancer.js" />
+    <Content Include="Content\js\freelancer.min.js" />
+    <Content Include="Content\js\jquery.easing.compatibility.js" />
+    <Content Include="Content\js\jquery.easing.js" />
+    <Content Include="Content\js\jquery.easing.min.js" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="img\avataaars.svg" />
+    <Content Include="img\portfolio\cabin.png" />
+    <Content Include="img\portfolio\cake.png" />
+    <Content Include="img\portfolio\circus.png" />
+    <Content Include="img\portfolio\game.png" />
+    <Content Include="img\portfolio\safe.png" />
+    <Content Include="img\portfolio\submarine.png" />
     <Content Include="Json\1001Movies.json" />
     <Content Include="Json\TrueFilm.json" />
     <Content Include="Scripts\bootstrap.bundle.js" />
@@ -349,6 +387,20 @@
     <Content Include="Scripts\esm\popper-utils.min.js.map" />
     <Content Include="Scripts\esm\popper-utils.js.map" />
     <Content Include="Json\afi.json" />
+    <Content Include="Content\AdminLTE\css\adminlte.css.map" />
+    <Content Include="Content\AdminLTE\css\adminlte.min.css.map" />
+    <Content Include="Content\AdminLTE\css\alt\adminlte.components.css.map" />
+    <Content Include="Content\AdminLTE\css\alt\adminlte.components.min.css.map" />
+    <Content Include="Content\AdminLTE\css\alt\adminlte.core.css.map" />
+    <Content Include="Content\AdminLTE\css\alt\adminlte.core.min.css.map" />
+    <Content Include="Content\AdminLTE\css\alt\adminlte.extra-components.css.map" />
+    <Content Include="Content\AdminLTE\css\alt\adminlte.extra-components.min.css.map" />
+    <Content Include="Content\AdminLTE\css\alt\adminlte.pages.css.map" />
+    <Content Include="Content\AdminLTE\css\alt\adminlte.pages.min.css.map" />
+    <Content Include="Content\AdminLTE\css\alt\adminlte.plugins.css.map" />
+    <Content Include="Content\AdminLTE\css\alt\adminlte.plugins.min.css.map" />
+    <Content Include="Content\AdminLTE\js\adminlte.js.map" />
+    <Content Include="Content\AdminLTE\js\adminlte.min.js.map" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
@@ -456,9 +508,11 @@
     <Content Include="Scripts\popper.js.map" />
     <Content Include="Scripts\popper-utils.min.js.map" />
     <Content Include="Scripts\popper-utils.js.map" />
+    <Content Include="Views\Shared\_LayoutList.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\Teste\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
